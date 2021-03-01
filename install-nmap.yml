@@ -1,0 +1,11 @@
+---
+- name: Install Nmap
+  hosts: all
+  gather_facts: true
+  become: yes
+  become_user: root
+  when: ansible_os_family == "Debian"
+  apt:
+    name: nmap
+    update_cache: yes
+    state: latest
