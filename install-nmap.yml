@@ -4,7 +4,6 @@
   become: yes
   become_user: root
   
-  when: ansible_os_family == "Debian"
   tasks:
     - name: Install Nmap
       apt:
